@@ -6,6 +6,8 @@
     <script src="js/lib/jquery.js"></script>
     <title>Исторический альманах</title>
     <link href="css/app.css" rel="stylesheet" />
+    <link href="css/mobileApp.css" rel="stylesheet" media="all and (max-width: 719px)"/>
+    <link href="css/tabletApp.css" rel="stylesheet" media="all and (min-width: 720px) and (max-width: 1440px)"/>
 </head>
 <body>
     <header class="header">
@@ -16,6 +18,15 @@
           <a href="#matherials">Материалы</a>
           <a href="#contacts">Контакты</a>
         </nav>
+
+        <div id="nav"> 
+          <button class="nav-button"> ☰ </button> 
+          <div class="nav-links"> 
+            <a href="#welcome">О проекте</a>
+            <a href="#matherials">Материалы</a>
+            <a href="#contacts">Контакты</a>
+          </div> 
+        </div>
       </header>
       <main class="pages">
         <section class="page" id="about">

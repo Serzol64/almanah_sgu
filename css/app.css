@@ -1,3 +1,5 @@
+@import url('components/mobileNav.css');
+
 @font-face {
   font-family: 'PT Serif';
   src: url("../media/layout/fonts/PT_Serif.eot") format("opentype"),
@@ -41,6 +43,51 @@
       /* Modern Browsers */
       url("../media/layout/fonts/Open Sans.woff2") format("woff2");
 }
+
+@keyframes titlesHeaders {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+  50% {
+		opacity: 0.5;
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes matherialCard {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+  50% {
+		opacity: 0.5;
+		transform: translateX(-25px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.animate-title {
+  animation: titlesHeaders 2s linear forwards;
+}
+.animate-image {
+  animation: content 1s linear normal both;
+}
+.animate-material-card {
+  animation: matherialCard 2s cubic-bezier(0.4, 0, 0.42, 0) normal forwards;
+}
+
 body{
   margin: 0;
   background: #F5F5DC;
@@ -60,6 +107,7 @@ h3, h4, strong{
 h1, h2, h3, h4, h5, h6, strong{
   font-family: 'Merriweather', sans-serif;
 }
+
 .pageTitle{
   padding: 3vw;
   text-align: center;
@@ -113,10 +161,12 @@ h1, h2, h3, h4, h5, h6, strong{
 .header > nav *{
   display: inline-block;
   color: white;
-  font-size: 150%;
+  font-size: large;
   margin: 4%;
   text-decoration: none;
   transition: transform 0.5s ease;
+  position: relative;
+  top: 10px;
 }
 .header > nav *:hover, .page#matherials > ul li a:hover, .copyright > div address a:hover{
   text-decoration: underline;
@@ -255,4 +305,20 @@ h1, h2, h3, h4, h5, h6, strong{
   font-weight: bold;
   text-decoration: none;
   color: #54302E;
+}
+
+@media screen and (max-width: 1440px) {
+  .header > nav{ display: none; }
+  .header > h1 {
+    margin-left: 3vw;
+  }
+  .page#about > .description {
+    margin-left: 3vw;
+  }
+  #nav{
+    display: block;
+  }
+  .header > h1{
+    flex: 0 1 90vw;
+  }
 }

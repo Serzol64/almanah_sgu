@@ -1,0 +1,58 @@
+@keyframes mobileMenu {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+    50% {
+		opacity: 0.5;
+		transform: translateY(-25px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+#nav{
+    flex: 0 1 10vw;
+    display: none;
+    font-size: small;
+    width: 100%;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    padding: 15%;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+}
+.nav-links {
+    display: none;
+    flex-flow: column nowrap;
+    background-color: rgba(84, 48, 46, 0.75);
+    color: white;
+    margin-top: 9px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+} 
+.nav-links a {
+    padding: 3%;
+    color: white;
+    text-decoration: none;
+    flex-basis: 0 1 100vw;
+    display: block;
+} 
+.nav-links a:hover,  .active-button{ 
+    background-color: white; 
+    color: #54302E;
+}
+
+.active-menu{
+    animation: mobileMenu 1s linear 0s 1 normal both;
+}

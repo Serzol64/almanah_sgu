@@ -1,0 +1,112 @@
+h2, .pageTitle{
+    font-size: 150%;
+  }
+  .pageTitle{
+    padding: calc(3vw / 4);
+  }
+  .header{
+    width: 100%;
+    padding: calc(2.5vw / 6);
+    min-height: calc(80px / 4);
+    font-size: xx-small;
+  }
+  .pages{
+    padding: calc(18.75px / 4);
+    min-height: 75%;
+    transform: translateY(25px);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  
+  .copyright{
+   min-height: calc(100px * 4);
+   padding: calc(4vw / 4);
+   flex-flow: column;
+   font-size: small;
+  }
+  
+  .page#about {
+    min-height: calc(200px * 2);
+    flex-flow: column-reverse nowrap;
+    padding-bottom: 5%;
+  }
+  .page#about > img {
+    max-width: calc(30% * 2);
+  }
+
+  .page#matherials > h2{
+    flex: 0 1 10%;
+  }
+  .page#contacts > h2{
+    flex: 0 1 10%;
+  }
+  .page#contacts > .contacts-data{
+    grid-auto-flow: row;
+    grid-auto-columns: 0;
+    grid-template-columns: 100%;
+    grid-auto-rows: 85% 1fr 1fr;
+    grid-template-rows: 75% 45% 1fr;
+    gap: 1% 0%;
+  }
+  
+  .page#contacts > .contacts-data div h4{
+    padding-top: 1%;
+  }
+  .page#contacts > .contacts-data div address, .page#contacts > .contacts-data div ul{
+    padding-bottom: 2%;
+  }
+  .page#matherials > ul{
+    max-width: 100%;
+    margin: 0;
+    padding: calc((18.75px / 2) / 4);
+  }
+  
+  .page#matherials > ul li{
+    display: block;
+    width: 84%;
+    max-height: calc(200px * 4);
+    padding: calc(4% * 2);
+    margin: 0;
+    margin-bottom: 10%;
+    padding-bottom: 20%;
+  }
+  .page#matherials > ul li:hover{
+    box-shadow: -8px -9px 10px 2px rgba(84, 48, 46, 0.9);
+  }
+  .page#matherials > ul li *{
+    font-size: 75%;
+  }
+  
+  .page#matherials > ul li *:not(:nth-child(1)){
+    padding-top: calc(5% / 4);
+  }
+  
+  .page#matherials > ul li h3{
+    font-size: 150%;
+  }
+  
+  .page#matherials > ul li img{
+  object-fit: cover;
+  }
+  
+  .page#matherials > ul li span, .page#matherials > ul li i{
+    font-size: 100%;
+    color: darkgray;
+  }
+  
+  .page#matherials > ul li a{
+    padding: 0.25vw;
+    margin-top: 1%;
+    font-size: 100%;
+  }
+  
+  .copyright > div{
+    flex: 0 1 50%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .page#contacts {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: calc(400px* 4);
+  }
